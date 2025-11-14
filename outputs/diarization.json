@@ -1,0 +1,30 @@
+[
+    {
+        "speaker": "Target",
+        "start": 0.0,
+        "end": 36.0,
+        "confidence": 0.899842381477356,
+        "text": "This is like perfect. It's the universe just putting it in perfect timing because that makes me so happy because it was exactly the opposite way So I've for a long time had people that I'd love to sit down with and every time I saw you do something with mental health and vocal Any of the segments that you ever did. I was just like she's amazing like you know It's incredible to the way you were talking about it when you'd post about it I'd be like oh, this is incredible like just to go my I was talking to my social media girl randomly We were just talking about bunch of stuff and just kind of what I would love to represent just talking about"
+    },
+    {
+        "speaker": "Target",
+        "start": 36.6,
+        "end": 42.12,
+        "confidence": 0.9259341359138489,
+        "text": "a new chapter for me And whatever and I was like who would you really want to like talk"
+    },
+    {
+        "speaker": "Speaker_B",
+        "start": 43.83,
+        "end": 44.82,
+        "confidence": 0.31934088468551636,
+        "text": "to or whatever"
+    },
+    {
+        "speaker": "Speaker_B",
+        "start": 46.47,
+        "end": 46.56,
+        "confidence": 0.36607643961906433,
+        "text": "And"
+    }
+]
