@@ -124,11 +124,8 @@ All segments labeled "Target" are concatenated → target_speaker.wav.
 
 ## 📜 Brief Approach (150–200 words)
 
-My solution implements a lightweight, fully offline Target Speaker Diarization and ASR pipeline designed for efficiency and rapid deployment. The system processes two inputs: a multi-speaker mixture and a short target speaker sample. First, audio-level Voice Activity Detection (VAD) is performed using WebRTC-VAD to segment the mixture into meaningful speech regions. For speaker identification, I extract fixed-length embeddings from both the target sample and each speech segment using the Resemblyzer voice encoder. Cosine similarity is computed between embeddings, and segments are classified as “Target” or “Speaker_B” based on a threshold.
-
-Recognized target segments are concatenated to produce a clean `target_speaker.wav` output. In parallel, the entire mixture is transcribed using Whisper (tiny model for offline CPU inference). The transcript is proportionally aligned to speech segments to generate per-segment text. A structured `diarization.json` file is then produced containing speaker label, timestamps, text, and confidence score.
-
-This approach prioritizes simplicity, modularity, and full offline compatibility while still delivering practical diarization and transcription results suitable for real-time extension in future versions.
+My solution implements a lightweight, fully offline Target Speaker Diarization and ASR pipeline designed for efficiency and rapid deployment. The system requires two inputs, which include a multi-speaker audio mixture, together with a brief sample of the target speaker's voice. The first step requires WebRTC-VAD to perform Voice Activity Detection (VAD) at the audio level, which divides the mixture into speech segments. The Resemblyzer voice encoder enables me to extract fixed-length embeddings from both the target sample and every speech segment for speaker identification. The system calculates cosine similarity between embeddings to determine whether segments belong to "Target" or "Speaker_B" based on a set threshold.  
+The system produces a clean target_speaker.wav file by joining all identified target segments together. The entire mixture undergoes transcription through Whisper (tiny model for offline CPU inference). The transcript is proportionally aligned to speech segments to generate per-segment text. The system produces a diarization.json file that stores speaker labels, together with timestamps, textual content, and confidence ratings. The method enables real-time transcription and diarization through its simple design and modular structure. It also provides offline functionality.
 
 ---
 
